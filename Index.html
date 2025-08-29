@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Niraj Jaishwal — Data Science & Computer Science Student</title>
+    <meta name="description" content="Portfolio of Niraj Jaishwal — Data Science & Computer Science enthusiast" />
+    <meta name="author" content="Niraj Jaishwal" />
+
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="Niraj Jaishwal — Portfolio" />
+    <meta property="og:description" content="Passionate about Data Science, Machine Learning, and Applied Mathematics. Explore my projects, skills, and journey." />
+    <meta property="og:image" content="./images/title.jpg" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1DB954',
+                        accent: '#6C63FF',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- AOS for scroll animations -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body class="antialiased bg-gray-50 text-gray-800 font-sans">
+    <!-- Navigation -->
+    <nav class="max-w-6xl mx-auto px-6 py-2 site-nav" aria-label="Primary navigation" data-aos="fade-down">
+        <ul class="flex flex-wrap gap-4 items-center text-sm">
+            <li><a href="#about" class="px-3 py-2 rounded hover:bg-gray-100 transition-colors">About</a></li>
+            <li><a href="#education" class="px-3 py-2 rounded hover:bg-gray-100 transition-colors">Education</a></li>
+            <li><a href="#experience" class="px-3 py-2 rounded hover:bg-gray-100 transition-colors">Experience</a></li>
+            <li><a href="#projects" class="px-3 py-2 rounded hover:bg-gray-100 transition-colors">Projects</a></li>
+            <li class="ml-auto"><a href="#contact" class="px-3 py-2 rounded hover:bg-gray-100 transition-colors">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="max-w-6xl mx-auto px-6 pt-16 pb-12">
+        <div class="text-center">
+            <div class="mb-8">
+                <div class="w-32 h-32 mx-auto rounded-full border-4 border-primary/20 flex items-center justify-center bg-gradient-to-br from-primary/10 to-accent/10 mb-6">
+                    <svg class="w-20 h-20" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Profile placeholder">
+                        <rect width="100" height="100" rx="50" fill="#1DB954"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="40" font-family="Inter" font-weight="600">NJ</text>
+                    </svg>
+                </div>
+                
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
+                    Hi, I'm <span class="text-primary">Niraj Jaishwal</span>
+                </h1>
+                
+                <p class="text-xl sm:text-2xl text-gray-600 mb-6">
+                    I'm a <span id="role" class="font-semibold text-accent">Data Science & Computer Science student</span>
+                </p>
+
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+                    Passionate about <span class="highlight inline-block text-primary font-semibold">Machine Learning</span>, 
+                    <span class="highlight inline-block text-primary font-semibold">AI</span>, and 
+                    <span class="highlight inline-block text-primary font-semibold">Innovation</span>
+                </p>
+            </div>
+
+            <div class="flex flex-wrap justify-center items-center gap-4 mb-8">
+                <a href="./assets/Resume.pdf" download class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-white font-semibold hover:opacity-95 transition-opacity shadow-lg" aria-label="Download resume">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12 16L7 11H17L12 16Z"/>
+                        <path d="M12 4V16"/>
+                        <path d="M20 21H4"/>
+                    </svg>
+                    Download Resume
+                </a>
+
+                <a href="mailto:nkj5@uakron.edu" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-white border-2 border-gray-200 text-gray-700 font-semibold hover:bg-gray-50 transition-colors shadow-lg">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12 13L0 4v16h24V4L12 13zM12 11L24 2H0l12 9z"/>
+                    </svg>
+                    Get In Touch
+                </a>
+            </div>
+
+            <div class="flex justify-center items-center gap-6">
+                <a href="https://github.com/NirajJaishwal" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12 .5C5.7.5.9 5.3.9 11.6c0 4.6 3 8.5 7.1 9.9.5.1.7-.2.7-.5v-1.9c-2.9.6-3.5-1.2-3.5-1.2-.5-1.4-1.2-1.8-1.2-1.8-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1 1.6-.8 1.8-1.2.5-.9 1.2-1.3 2.1-1.6-.9-.1-1.8-.4-1.8-1.9 0-.4.2-.7.4-1-1.6-.2-3.3-.8-3.3-3.6 0-.8.3-1.6.8-2.2-.1-.2-.4-1.2.1-2.6 0 0 .7-.2 2.4.8.7-.2 1.5-.3 2.3-.3.8 0 1.6.1 2.3.3 1.7-1 2.4-.8 2.4-.8.5 1.4.2 2.4.1 2.6.5.6.8 1.4.8 2.2 0 2.8-1.8 3.4-3.4 3.6.3.3.6.8.6 1.6v2.3c0 .3.2.6.7.5 4.2-1.4 7.1-5.3 7.1-9.9C23.1 5.3 18.3.5 12 .5z"/>
+                    </svg>
+                    <span>GitHub</span>
+                </a>
+
+                <a href="https://www.linkedin.com/in/niraj-kumar-jaishwal/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4zM9 8h3.8v2.2h.1c.5-1 1.8-2.2 3.7-2.2 4 0 4.7 2.6 4.7 6V24h-4v-7.1c0-1.7-.1-3.9-2.4-3.9s-2.8 1.9-2.8 3.8V24H9V8z"/>
+                    </svg>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main content -->
+    <main class="max-w-6xl mx-auto px-6 py-10 space-y-10">
+
+        <!-- About -->
+        <section id="about" class="rounded-lg p-6 bg-white shadow-sm border border-gray-100" data-aos="fade-up">
+            <h2 class="text-2xl font-semibold mb-4">About Me</h2>
+            <div class="grid md:grid-cols-2 gap-6 items-center">
+                <div>
+                    <p class="text-sm text-gray-700 leading-relaxed mb-4">
+                        I'm a passionate <span class="font-semibold text-primary">Data Science & Computer Science student</span> at the University of Akron, 
+                        with a strong foundation in applied mathematics and statistics. My journey in technology began with a curiosity 
+                        about how data can drive meaningful insights and create innovative solutions.
+                    </p>
+                    <p class="text-sm text-gray-700 leading-relaxed mb-4">
+                        I specialize in <span class="highlight inline-block text-primary font-semibold">Machine Learning</span>,
+                        <span class="highlight inline-block text-primary font-semibold">Software Development</span>,
+                        <span class="highlight inline-block text-primary font-semibold">Deep Learning</span>, and 
+                        <span class="highlight inline-block text-primary font-semibold">Statistical Analysis</span>. 
+                        My projects range from building LSTM models for stock prediction to developing reinforcement learning agents, 
+                        always focusing on practical applications and real-world impact.
+                    </p>
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        When I'm not coding or analyzing data, you'll find me exploring new technologies, reading papers, or collaborating with teams to solve complex problems. I believe in continuous learning and pushing the boundaries 
+                        of what's possible with data and technology.
+                    </p>
+                </div>
+                <div class="space-y-4">
+                    <div class="p-4 rounded-lg bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20">
+                        <h3 class="font-semibold text-gray-900 mb-2 text-sm">Current Focus</h3>
+                        <p class="text-gray-700 text-sm">Graduating in December 2025 with dual degrees in Computer Science and Applied Mathematics and minor in Statistics</p>
+                    </div>
+                    <div class="p-4 rounded-lg bg-gradient-to-r from-accent/10 to-primary/10 border border-accent/20">
+                        <h3 class="font-semibold text-gray-900 mb-2 text-sm">Research Interests</h3>
+                        <p class="text-gray-700 text-sm">Machine Learning, AI, Statistical Modeling, Mathematics Modeling, and Data-Driven Decision Making</p>
+                    </div>
+                    <div class="p-4 rounded-lg bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20">
+                        <h3 class="font-semibold text-gray-900 mb-2 text-sm">Career Goals</h3>
+                        <p class="text-gray-700 text-sm">To become a leading Data Scientist, contributing to innovative solutions and advancing the field</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section id="education" class="rounded-lg p-6 bg-white shadow-sm border border-gray-100" data-aos="fade-up">
+            <h2 class="text-2xl font-semibold mb-4">Education</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <article class="rounded-md p-4 bg-gray-50 border border-gray-100">
+                    <h3 class="font-medium">University of Akron</h3>
+                    <div class="flex justify-between mt-2">
+                        <ul class="text-gray-600 text-sm list-disc ml-5 space-y-1">
+                            <li>Bachelor of Science in Computer Science</li>
+                            <li>Dual Bachelor of Science in Applied Mathematics (Focus on Data Science)</li>
+                            <li>Minor: Statistics</li>
+                        </ul>
+                        <div class="text-right">
+                            <p class="text-sm">CGPA: 3.842</p>
+                            <p class="mt-1 text-xs text-gray-600">Expected Graduation: December 2025</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="rounded-md p-4 bg-gray-50 border border-gray-100">
+                    <h3 class="font-medium">Certifications</h3>
+                    <ul class="mt-2 text-sm list-disc ml-5 text-gray-600">
+                        <li>Dell TechDirect Certification, Dell</li>
+                        <li>IBM Machine Learning with Python, Coursera</li>
+                        <li>Generative AI Certification, Coursera</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience" class="rounded-lg p-6 bg-white shadow-sm border border-gray-100" data-aos="fade-up">
+            <h2 class="text-2xl font-semibold mb-4">Experience</h2>
+            <div class="space-y-4">
+
+                <!-- Experience Item -->
+                <article class="p-4 rounded-md bg-gray-50 border border-gray-100">
+                    <div class="flex items-center justify-between">
+                        <!-- Left side: Company + button -->
+                        <button onclick="toggleDetails(this)" class="flex items-center gap-2 text-left">
+                            <img src="./images/Company_logo/UARF_logo.jpg" alt="UARF logo" class="w-8 h-8 object-contain rounded" />
+                            <h3 class="font-medium">University of Akron Research Foundation</h3>
+                            <span class="transform transition-transform">›</span>
+                        </button>
+                        <!-- Right side: Years -->
+                        <span class="text-sm text-gray-600">2024 – Present</span>
+                    </div>
+                    <p class="mt-1 text-sm text-gray-600 ml-10">Entrepreneurial Programs Intern</p>
+                    <ul class="hidden list-disc ml-8 mt-3 text-sm text-gray-600 space-y-1">
+                        <li>Created and maintained I-Corps dataset of 1,000+ teams(2013-present), covering all participants to track grants, assess program outcomes, and program reporting.</li>
+                        <li>Managed backend operations for 45+ teams per cohort in Basecamp and coordinating profiles for 130+ instructors and participants per cohort, ensuring seamless program execution.</li>
+                        <li>Optimize tasks like certificate creation, reporting, and data management using Python scripts, VBA macros, Mail merge and Excel functions, boosting efficiency and reducing manual work by more than 50%.</li>
+                        <li>Collaborate with instructors and project coordinators to create reports with findings and recommendations, shaping team progression decisions and guiding program evaluations submitted to NSF and funding offices for continued support.</li>
+                    </ul>
+                </article>
+
+                <!-- Another Experience Item -->
+                <article class="p-4 rounded-md bg-gray-50 border border-gray-100">
+                    <div class="flex items-center justify-between">
+                        <button onclick="toggleDetails(this)" class="flex items-center gap-2 text-left">
+                            <img src="./images/Company_logo/UA_IT_services.jpg" alt="IT Service Logo" class="w-8 h-8 object-contain rounded" />
+                            <h3 class="font-medium">Information Technology Services</h3>
+                            <span class="transform transition-transform">›</span>
+                        </button>
+                        <span class="text-sm text-gray-600">2024 – Present</span>
+                    </div>
+                    <p class="mt-1 text-sm text-gray-600 ml-10">Student Technical Support Analyst</p>
+                    <ul class="hidden list-disc ml-8 mt-3 text-sm text-gray-600 space-y-1">
+                        <li>Deliver first-level technical support to students, faculty and staff by resolving hardware, software, accounts and network issues through in-person, and phone using Microsoft Azure and Microsoft Intune.</li>
+                        <li>Maintain 20+ loaner laptops by performing routine maintenance, software updates (e.g. Microsoft Suite, Adobe), reimagining and hardware configurations, ensuring 100% readiness for checkout.</li>
+                        <li>Assist 100+ users monthly with university systems applications, providing clear guidance and support.</li>
+                        <li>Document technical issues and solutions in the ticketing system, creating clear and detailed records to improve future troubleshooting and reduced resolution times by 15%.</li>
+                    </ul>
+                </article>
+
+                <!-- Student Supervisor Library -->
+                 <article class="p-4 rounded-md bg-gray-50 border border-gray-100">
+                    <div class="flex items-center justify-between">
+                        <button onclick="toggleDetails(this)" class="flex items-center gap-2 text-left">
+                            <img src="./images/Company_logo/Bierce_library.png" alt="Bierce Library Logo" class="w-8 h-8 object-contain rounded" />
+                            <h3 class="font-medium">Bierce Library</h3>
+                            <span class="transform transition-transform">›</span>
+                        </button>
+                        <span class="mt-1 text-sm text-gray-600">2022 – Present</span>
+                    </div>
+                    <p class="mt-1 text-sm text-gray-600 ml-10">Student Supervisor</p>
+                    <ul class="hidden list-disc ml-8 mt-3 text-sm text-gray-600 space-y-1">
+                        <li>Manage library operations during non-staff hours for a safe and effective environment, while collaborating with 15-20 student assistants and fostering teamwork, accountability, and clear communication.</li>
+                        <li>Collaborate with library staff to streamline workflows, organize events, and contribute to training materials and documentation.</li>
+                        <li>Resolve 95% technical issues with library equipment, leveraging technical proficiency and critical thinking to reduce disruptions.</li>
+                        <li>Serve as a primary point of contact for patrons, guiding them in navigating 342 databases and the university catalog, explaining library policies, and facilitating interactions between users and library services.</li>
+                    </ul>
+                 </article>
+
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="rounded-lg p-6 bg-white shadow-sm border border-gray-100" data-aos="fade-up">
+            <h2 class="text-2xl font-semibold mb-4">Projects</h2>
+            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+                <!-- Stock Price Analyzer using LSTM -->
+                <article class="rounded-md overflow-hidden border border-gray-200 shadow-sm bg-white">
+                    <a href="https://github.com/NirajJaishwal/Stock-Prize-Analyzer" class="block thumb" aria-label="Stock Price Analyzer using LSTM">
+                        <img src="./images/project_image/Stock_prize_analyzer.jpg" alt="Stock Price Analyzer LSTM" class="w-full h-40 object-cover" loading="lazy">
+                    </a>
+                    <div class="p-4 bg-gray-50">
+                        <h3 class="font-medium">Stock Price Analyzer using LSTM</h3>
+                        <p class="text-gray-600 text-sm mt-2">Developed an LSTM-based deep learning model for financial time-series prediction, incorporating engineered technical indicators such as MACD, RSI, and ATR. Applied holdout validation and hyperparameter tuning to improve model performance. Deployed the solution as a web application using Flask, hosted on Render, with automated deployment scripts written in Bash.</p>
+                        <div class="mt-3 flex items-center justify-between">
+                            <a href="https://stock-prize-analyzer-1.onrender.com/" class="px-3 py-1 rounded-md bg-primary text-white font-semibold hover:opacity-95 transition-opacity">View</a>
+                            <a href="https://stock-prize-analyzer-1.onrender.com/" class="px-3 py-1 ml-1 rounded-md bg-primary text-white font-semibold hover:opacity-95 transition-opacity">Website</a>
+                            <span class="text-xs text-gray-600 text-right">LSTM · TensorFlow · Keras · Git</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Telecommunication Customer Churn Prediction -->
+                <article class="rounded-md overflow-hidden border border-gray-200 shadow-sm bg-white">
+                    <a href="https://github.com/NirajJaishwal/churn-prediction-flask-app" class="block thumb" aria-label="Telecom Churn Prediction">
+                        <img src="./images/project_image/Tele_customer_churn_prediction.png" alt="Telecom Churn Prediction" class="w-full h-40 object-cover" loading="lazy">
+                    </a>
+                    <div class="p-4 bg-gray-50">
+                        <h3 class="font-medium">Telecommunication Customer Churn Prediction</h3>
+                        <p class="text-gray-600 text-sm mt-2">Performed statistical analysis for telecom customer churn prediction using CHAID, Exhaustive CHAID, CART, and Logistic Regression in SPSS and R, achieving up to 80% accuracy. Selected the best-performing decision tree model, reimplemented it in Python with scikit-learn, and deployed it as a web application using Flask with a JavaScript front end for real-time predictions.</p>
+                        <div class="mt-3 flex items-center justify-between">
+                            <a href="https://github.com/NirajJaishwal/churn-prediction-flask-app" class="px-3 py-1 rounded-md bg-primary text-white font-semibold hover:opacity-95 transition-opacity">View</a>
+                            <span class="text-xs text-gray-600 text-right"> Statistical Modeling · scikit-learn · Flask · SPSS · R</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Interactive Sensory Feedback System -->
+                <article class="rounded-md overflow-hidden border border-gray-200 shadow-sm bg-white">
+                    <a href="https://github.com/NirajJaishwal/Interactive-Feedback-System" class="block thumb" aria-label="Interactive Sensory Feedback System">
+                        <img src="./images/project_image/Interactive_sensory_feedback_system.png" alt="Interactive Sensory Feedback System" class="w-full h-40 object-cover" loading="lazy">
+                    </a>
+                    <div class="p-4 bg-gray-50">
+                        <h3 class="font-medium">Interactive Sensory Feedback System</h3>
+                        <p class="text-gray-600 text-sm mt-2">Developed an embedded system using Raspberry Pi Pico W with MicroPython, integrating ultrasonic sensor, touch sensor, RGB LED, and buzzer for real-time audio-visual feedback. Implemented PWM control for precise LED brightness and buzzer tones, and managed multi-sensor input for interactive functionality.</p>
+                        <div class="mt-3 flex items-center justify-between">
+                            <a href="https://github.com/NirajJaishwal/Interactive-Feedback-System" class="px-3 py-1 rounded-md bg-primary text-white font-semibold hover:opacity-95 transition-opacity">View</a>
+                            <span class="text-xs text-gray-600 text-right">MicroPython · Embedded Systems Development · Sensor Integration</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Linux Shell Development -->
+                <article class="rounded-md overflow-hidden border border-gray-200 shadow-sm bg-white">
+                    <div class="thumb">
+                        <img src="./images/project_image/Linux_shell_development.png" alt="Linux Shell Development" class="w-full h-40 object-cover" loading="lazy">
+                    </div>
+                    <div class="p-4 bg-gray-50">
+                        <h3 class="font-medium">Linux Shell Development</h3>
+                        <p class="text-gray-600 text-sm mt-2">Created a custom command-line tool that lets users manage files and run programs in a simplified Linux environment. Designed it to handle everyday tasks like copying, deleting, and launching applications, and provided a clear user guide to make it easy for others to install and use.</p>
+                        <div class="text-right">
+                            <span class="text-xs text-gray-600 text-right">C · POSIX</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Restaurant Management Web Application -->
+                <article class="rounded-md overflow-hidden border border-gray-200 shadow-sm bg-white">
+                    <div class="thumb">
+                        <img src="./images/project_image/Resturant_management_app.png" alt="Restaurant Management Web App" class="w-full h-40 object-cover" loading="lazy">
+                    </div>
+                    <div class="p-4 bg-gray-50">
+                        <h3 class="font-medium">Restaurant Management Web Application</h3>
+                        <p class="text-gray-600 text-sm mt-2">Developed a four-tier restaurant management system with a PHP backend and SQL database for CRUD operations. Designed the front end using HTML, CSS, and JavaScript, ensuring responsive user interaction. Implemented version control with Git for collaborative development and maintainability.</p>
+                        <div class="text-right">
+                            <span class="text-xs text-gray-600 text-right">PHP · SQL · JavaScript · Git</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Seam Carving Image Resizing Project -->
+                <article class="rounded-md overflow-hidden border border-gray-200 shadow-sm bg-white">
+                    <a href="https://github.com/NirajJaishwal/Seam-Carving" class="block thumb" aria-label="Seam Carving Image Resizing">
+                        <img src="./images/project_image/Seam_carving.png" alt="Seam Carving" class="w-full h-40 object-cover" loading="lazy">
+                    </a>
+                    <div class="p-4 bg-gray-50">
+                        <h3 class="font-medium">Seam Carving Image Resizing</h3>
+                        <p class="text-gray-600 text-sm mt-2">Implemented a seam carving algorithm in Python using dynamic programming to resize PGM images while preserving key visual features. Supported both vertical and horizontal seam removal, leveraging NumPy for efficient array operations and demonstrated the workflow in a Jupyter Notebook.</p>
+                        <div class="mt-3 flex items-center justify-between">
+                            <a href="https://github.com/NirajJaishwal/Seam-Carving" class="px-3 py-1 rounded-md bg-primary text-white font-semibold hover:opacity-95 transition-opacity">View</a>
+                            <span class="text-xs text-gray-600 text-right">Python · NumPy · Dynamic Programming</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Smartphone Market Analysis -->
+                <article class="rounded-md overflow-hidden border border-gray-200 shadow-sm bg-white">
+                    <a href="https://github.com/NirajJaishwal/Smartphone-Market-Analysis" class="block thumb" aria-label="Smartphone Market Analysis">
+                        <img src="./images/project_image/Smartphone_market_analysis.png" alt="Smartphone Market Analysis" class="w-full h-40 object-cover" loading="lazy">
+                    </a>
+                    <div class="p-4 bg-gray-50">
+                        <h3 class="font-medium">Smartphone Market Analysis</h3>
+                        <p class="text-gray-600 text-sm mt-2">Conducted a comparative study of Apple and Samsung smartphones using a dataset of 3,000+ records. Built regression models with pandas, scikit-learn, and statsmodels, achieving ~90% prediction accuracy. Generated visual insights with matplotlib and seaborn to analyze market trends and performance factors.</p>
+                        <div class="mt-3 flex items-center justify-between">
+                            <a href="https://github.com/NirajJaishwal/Smartphone-Market-Analysis" class="px-3 py-1 rounded-md bg-primary text-white font-semibold hover:opacity-95 transition-opacity">View</a>
+                            <span class="text-xs text-gray-600 text-right">pandas · scikit-learn · matplotlib</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Statistical Data Analysis and Modelling Project -->
+                <article class="rounded-md overflow-hidden border border-gray-200 shadow-sm bg-white">
+                    <div class="thumb">
+                        <img src="https://via.placeholder.com/800x450?text=Statistical+Data+Analysis" alt="Statistical Data Analysis" class="w-full h-40 object-cover" loading="lazy">
+                    </div>
+                    <div class="p-4 bg-gray-50">
+                        <h3 class="font-medium">Statistical Data Analysis & Modelling</h3>
+                        <p class="text-gray-600 text-sm mt-2">Performed statistical data analysis and modeling by building classification models and regression analysis in SAS and SPSS. Conducted hypothesis testing, including t-tests (R), chi-square, and ANOVA (SAS), while interpreting model assumptions and results to ensure statistical validity.</p>
+                        <div class="text-right">
+                            <span class="text-xs text-gray-600">SAS · R · SPSS</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Reinforcement Learning Tic-Tac-Toe -->
+                <article class="rounded-md overflow-hidden border border-gray-200 shadow-sm bg-white">
+                    <a href="https://github.com/NirajJaishwal/Reinforcement-Learning---Tic-Tac-Toe" class="block thumb" aria-label="Reinforcement Learning Tic-Tac-Toe">
+                        <img src="./images/project_image/Tic_tac_toe.png" alt="Reinforcement Learning Tic-Tac-Toe" class="w-full h-40 object-cover" loading="lazy">
+                    </a>
+                    <div class="p-4 bg-gray-50">
+                        <h3 class="font-medium">Reinforcement Learning — Tic-Tac-Toe</h3>
+                        <p class="text-gray-600 text-sm mt-2">Implemented a reinforcement learning agent using Q-Learning to play Tic-Tac-Toe, trained via self-play to learn optimal strategies. Evaluated model performance against random and minimax opponents, and conducted hyperparameter tuning as part of a collaborative team project. Developed demo visuals to showcase agent gameplay and learning outcomes.</p>
+                        <div class="mt-3 flex items-center justify-between">
+                            <a href="https://github.com/NirajJaishwal/Reinforcement-Learning---Tic-Tac-Toe" class="px-3 py-1 rounded-md bg-primary text-white font-semibold hover:opacity-95 transition-opacity">View</a>
+                            <span class="text-xs text-gray-600 text-right">Reinforcement Learning · Q-Learning · Team Collaboration</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="rounded-lg p-6 bg-white shadow-sm border border-gray-100" data-aos="fade-up">
+            <h2 class="text-2xl font-semibold mb-4">Skills</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Programming Languages -->
+                <div class="space-y-3">
+                    <h3 class="font-semibold text-gray-900 text-sm">Programming Languages</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">Python</span>
+                        <span class="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">R</span>
+                        <span class="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">C++</span>
+                        <span class="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">JavaScript</span>
+                        <span class="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">PHP</span>
+                        <span class="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">SQL</span>
+                        <span class="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">MicroPython</span>
+                    </div>
+                </div>
+
+                <!-- Machine Learning & AI -->
+                <div class="space-y-3">
+                    <h3 class="font-semibold text-gray-900 text-sm">Machine Learning & AI</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-accent/10 text-accent text-xs font-medium rounded-full">scikit-learn</span>
+                        <span class="px-3 py-1 bg-accent/10 text-accent text-xs font-medium rounded-full">TensorFlow</span>
+                        <span class="px-3 py-1 bg-accent/10 text-accent text-xs font-medium rounded-full">PyTorch</span>
+                        <span class="px-3 py-1 bg-accent/10 text-accent text-xs font-medium rounded-full">LSTM</span>
+                        <span class="px-3 py-1 bg-accent/10 text-accent text-xs font-medium rounded-full">Q-Learning</span>
+                        <span class="px-3 py-1 bg-accent/10 text-accent text-xs font-medium rounded-full">Reinforcement Learning</span>
+                        <span class="px-3 py-1 bg-accent/10 text-accent text-xs font-medium rounded-full">Deep Learning</span>
+                    </div>
+                </div>
+
+                <!-- Data Analysis & Visualization -->
+                <div class="space-y-3">
+                    <h3 class="font-semibold text-gray-900 text-sm">Data Analysis & Visualization</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">Statistical Analysis</span>
+                        <span class="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">pandas</span>
+                        <span class="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">NumPy</span>
+                        <span class="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">matplotlib</span>
+                        <span class="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">seaborn</span>
+                        <span class="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">SAS</span>
+                        <span class="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">SPSS</span>
+                        <span class="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">Excel</span>
+                        <span class="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">Power BI</span>
+                    </div>
+                </div>
+
+                <!-- Web Development -->
+                <div class="space-y-3">
+                    <h3 class="font-semibold text-gray-900 text-sm">Web Development</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-accent/10 text-accent text-xs font-medium rounded-full">HTML</span>
+                        <span class="px-3 py-1 bg-accent/10 text-accent text-xs font-medium rounded-full">CSS</span>
+                        <span class="px-3 py-1 bg-accent/10 text-accent text-xs font-medium rounded-full">Flask</span>
+                        <span class="px-3 py-1 bg-accent/10 text-accent text-xs font-medium rounded-full">Git</span>
+                        <span class="px-3 py-1 bg-accent/10 text-accent text-xs font-medium rounded-full">REST APIs</span>
+                    </div>
+                </div>
+
+                <!-- Statistical Analysis -->
+                <div class="space-y-3">
+                    <h3 class="font-semibold text-gray-900 text-sm">Statistical Analysis</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">Regression Analysis</span>
+                        <span class="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">Hypothesis Testing</span>
+                        <span class="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">ANOVA</span>
+                        <span class="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">Chi-Square</span>
+                        <span class="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">Time Series</span>
+                    </div>
+                </div>
+
+                <!-- Tools & Platforms -->
+                <div class="space-y-3">
+                    <h3 class="font-semibold text-gray-900 text-sm">Tools & Platforms</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-accent/10 text-accent text-xs font-medium rounded-full">Jupyter Notebook</span>
+                        <span class="px-3 py-1 bg-accent/10 text-accent text-xs font-medium rounded-full">Raspberry Pi</span>
+                        <span class="px-3 py-1 bg-accent/10 text-accent text-xs font-medium rounded-full">Microsoft Azure</span>
+                        <span class="px-3 py-1 bg-accent/10 text-accent text-xs font-medium rounded-full">Render</span>
+                        <span class="px-3 py-1 bg-accent/10 text-accent text-xs font-medium rounded-full">Linux</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" data-aos="fade-up">
+            <h2 class="text-2xl font-semibold mb-4 text-center">Contact</h2>
+            <div class="max-w-md mx-auto">
+                <div class="text-sm text-gray-600 text-center mb-4">Ready to connect?</div>
+
+                <div class="space-y-3">
+                    <a href="mailto:nkj5@uakron.edu?subject=Portfolio Inquiry&body=Hi Niraj,%0D%0A%0D%0AI came across your portfolio and would like to connect.%0D%0A%0D%0ABest regards," 
+                        class="block px-6 py-3 text-center rounded-md bg-primary text-white font-semibold hover:opacity-95 transition-opacity">
+                        Send Email
+                    </a>
+
+                    <button id="copyEmail" class="w-full px-6 py-3 rounded-md bg-white border border-gray-200 hover:bg-gray-50 transition-colors">
+                        Copy Email Address
+                    </button>
+                </div>
+
+                <div class="mt-4 text-center text-sm text-gray-600">
+                    <p>Email: nkj5@uakron.edu</p>
+                    <p class="mt-1">I typically respond within 24 hours</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center text-gray-600 text-sm py-8">
+            © <span id="year"></span> Niraj Jaishwal — Built with Tailwind
+        </footer>
+
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="./js/script.js"></script>
+
+
+</body>
+</html>
