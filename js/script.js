@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'Data Science & Computer Science student',
         'Machine Learning Enthusiast',
         'AI Explorer',
-        'Software Developer'
+        'Software Developer',
+        'Technical Support Analyst'
     ];
     let i = 0;
     const roleEl = document.getElementById('role');
