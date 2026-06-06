@@ -38,11 +38,11 @@ html { scroll-behavior: smooth; }
   border-radius: 10px;
 }
 
-/* Upcoming & Current Projects styles */
-#upcoming-projects .rounded-md {
+/* Current Builds styles */
+#current-builds .rounded-md {
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
-#upcoming-projects .rounded-md:hover {
+#current-builds .rounded-md:hover {
   transform: translateY(-6px);
   box-shadow: 0 10px 30px rgba(16,24,40,0.06);
 }
